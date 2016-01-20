@@ -1,4 +1,4 @@
-FROM ubuntu:vivid
+FROM ubuntu:utopic
 
 MAINTAINER Sebastian Gutsche <sebastian.gutsche@gmail.com>
 
