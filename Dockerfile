@@ -3,7 +3,7 @@ FROM ubuntu:trusty
 MAINTAINER Sebastian Gutsche <sebastian.gutsche@gmail.com>
 
 RUN    apt-get update -qq \
-    && apt-get install -y wget tar
+    && apt-get install -y wget tar python
 
 RUN    adduser --quiet --shell /bin/bash --gecos "Sage user,101,," --disabled-password sage \
     && adduser sage sudo \
