@@ -1,4 +1,4 @@
-FROM ubuntu:utopic
+FROM ubuntu:trusty
 
 MAINTAINER Sebastian Gutsche <sebastian.gutsche@gmail.com>
 
