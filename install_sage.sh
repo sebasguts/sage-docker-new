@@ -7,6 +7,7 @@ ln -sf sage-7.0 sage
 cd sage
 make
 ./sage <<EOFSAGE
+    install_scripts("/usr/bin")
     from sage.misc.misc import DOT_SAGE
     from sagenb.notebook import notebook
     directory = DOT_SAGE+'sage_notebook'
