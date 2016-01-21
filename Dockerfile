@@ -1,9 +1,9 @@
-FROM ubuntu:trusty
+FROM ubuntu:wily
 
 MAINTAINER Sebastian Gutsche <sebastian.gutsche@gmail.com>
 
 RUN    apt-get update -qq \
-    && apt-get install -y wget tar python
+    && apt-get install -y wget build-essential m4 dpkg-dev
 
 RUN    adduser --quiet --shell /bin/bash --gecos "Sage user,101,," --disabled-password sage \
     && chown -R sage:sage /home/sage/

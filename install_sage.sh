@@ -1,9 +1,11 @@
 #!/bin/bash
 cd /opt
-wget ftp://ftp.fu-berlin.de/unix/misc/sage/linux/64bit/sage-6.10-Ubuntu_14.04-x86_64.tar.bz2
-tar -xf sage-6.10-Ubuntu_14.04-x86_64.tar.bz2
-rm sage-6.10-Ubuntu_14.04-x86_64.tar.bz2
-cd SageMath
+wget http://www-ftp.lip6.fr/pub/math/sagemath/src/sage-7.0.tar.gz
+tar -xf sage-7.0.tar.gz
+rm sage-7.0.tar.gz
+ln -sf sage-7.0 sage
+cd sage
+make
 ./sage <<EOFSAGE
     from sage.misc.misc import DOT_SAGE
     from sagenb.notebook import notebook
@@ -13,5 +15,5 @@ cd SageMath
     nb.save()
     quit
 EOFSAGE
-ln -snf /opt/SageMath/sage /usr/bin/sage
+ln -sf /opt/sage/sage /usr/bin/sage
 chown -R sage:sage /opt/SageMath
